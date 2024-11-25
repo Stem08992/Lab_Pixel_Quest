@@ -26,10 +26,10 @@ public class PQPlayerMovement : MonoBehaviour
 
         // Flips the player sprite to face the direction of movement. 
         if (xVelocity > 0){
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = false;
         }
         else{
-            spriteRenderer.flipX = false; 
+            spriteRenderer.flipX = true; 
         }
 
         // Saves player input to the Rigidbody and makes the player move at the given speed.

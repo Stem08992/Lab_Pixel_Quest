@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head><meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this.t.bind(this),this.touchStartHandler=this.i.bind(this),this.touchMoveHandler=this.o.bind(this),this.touchEndHandler=this.h.bind(this),this.clickHandler=this.u.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this.l(this),window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.everythingLoaded&&this.m()})),document.addEventListener("DOMContentLoaded",(()=>{this.p()})),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}k(t){document.hidden?t.t():(this.triggerEvents.forEach((e=>window.addEventListener(e,t.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler))}_(){this.triggerEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}i(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this.L(t.target,!0),this.M(t.target,"onclick","rocket-onclick"),this.C())}o(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.O()}h(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}u(t){t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this.O()}D(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))}))}l(t){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(e,i,o){"click"!==e||t.windowLoaded||i===t.clickHandler||t.interceptedClickListeners.push({target:this,func:i,options:o}),(this||window).addEventListenerBase(e,i,o)}}L(t,e){this.interceptedClickListeners.forEach((i=>{i.target===t&&(e?t.removeEventListener("click",i.func,i.options):t.addEventListener("click",i.func,i.options))})),t.parentNode!==document.documentElement&&this.L(t.parentNode,e)}S(){return new Promise((t=>{this.T?this.O=t:t()}))}C(){this.T=!0}O(){this.T=!1}M(t,e,i){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(i,event.target.getAttribute(e)),event.target.removeAttribute(e))}t(){this._(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this.R.bind(this)):this.R()}p(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.j(t,"preconnect")}async R(){this.lastBreath=Date.now(),this.P(this),this.F(this),this.q(),this.A(),this.I(),await this.U(this.delayedScripts.normal),await this.U(this.delayedScripts.defer),await this.U(this.delayedScripts.async);try{await this.W(),await this.H(this),await this.J()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.S().then((()=>{this.D()})),this.N()}A(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async B(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),i.hasAttribute("src")?(i.addEventListener("load",o),i.addEventListener("error",(function(){i.setAttribute("data-rocket-status","failed"),e()})),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o),t.addEventListener("error",(function(){t.setAttribute("data-rocket-status","failed"),e()})),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed"),e()}}));t.setAttribute("data-rocket-status","skipped")}async U(t){const e=t.shift();return e&&e.isConnected?(await this.B(e),this.U(t)):Promise.resolve()}I(){this.j([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}j(t,e){var i=document.createDocumentFragment();t.forEach((t=>{const o=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(o){const n=document.createElement("link");n.href=o,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),i.appendChild(n),this.trash.push(n)}})),document.head.appendChild(i)}P(t){let e={};function i(i,o){return e[o].eventsToRewrite.indexOf(i)>=0&&!t.everythingLoaded?"rocket-"+i:i}function o(t,o){!function(t){e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(o)}function n(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o||function(){},set(n){t.everythingLoaded?o=n:e["rocket"+i]=o=n}})}o(document,"DOMContentLoaded"),o(window,"DOMContentLoaded"),o(window,"load"),o(window,"pageshow"),o(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}F(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){if(o&&o.fn&&!t.allJQueries.includes(o)){o.fn.ready=o.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(o):document.addEventListener("rocket-DOMContentLoaded",(()=>e.bind(document)(o))),o([])};const e=o.fn.on;o.fn.on=o.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),e.apply(this,arguments),this},t.allJQueries.push(o)}e=o}o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}async H(t){const e=document.querySelector("script[data-webpack]");e&&(await async function(){return new Promise((t=>{e.addEventListener("load",t),e.addEventListener("error",t)}))}(),await t.K(),await t.H(t))}async W(){this.domReadyFired=!0,await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async J(){await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}m(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}q(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+e);const o=document.createRange(),n=i.parentElement;let s=t.get(i);void 0===s&&(s=i.nextSibling,t.set(i,s));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),n.insertBefore(c,s)}}async G(){Date.now()-this.lastBreath>45&&(await this.K(),this.lastBreath=Date.now())}async K(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}N(){this.trash.forEach((t=>t.remove()))}static run(){const t=new RocketLazyLoadScripts;t.k(t)}}RocketLazyLoadScripts.run()})();</script>
+<meta name="viewport" content="width=device-width" />
+<script data-ad-client="ca-pub-6752320144624820" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<title>Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Droid%20Sans&#038;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid%20Sans&#038;display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid%20Sans&#038;display=swap" /></noscript>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link data-minify="1" rel="stylesheet" type="text/css" media="all" href="https://www.pngmart.com/wp-content/cache/min/1/wp-content/themes/pngmart/style.css?ver=1731061050" />
+<link rel="pingback" href="https://www.pngmart.com/xmlrpc.php" />
+<link rel="icon" href="/files/favicon.ico" type="image/x-icon" />
+<link rel="alternate" hreflang="en" href="https://www.pngmart.com" />
+
+<!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
+<meta name="description" content="Download free Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG in high-quality transparent resolution for personal design projects."/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://www.pngmart.com/image/505763" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG" />
+<meta property="og:description" content="Download free Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG in high-quality transparent resolution for personal design projects." />
+<meta property="og:url" content="https://www.pngmart.com/image/505763" />
+<meta property="og:site_name" content="PNG Mart" />
+<meta property="article:tag" content="Celeste Game" />
+<meta property="article:section" content="Gaming" />
+<meta property="og:image" content="https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG.png" />
+<meta property="og:image:secure_url" content="https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG.png" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="1280" />
+<meta property="og:image:alt" content="Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG" />
+<meta property="og:image:type" content="image/png" />
+<meta property="article:published_time" content="2024-11-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG" />
+<meta name="twitter:description" content="Download free Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG in high-quality transparent resolution for personal design projects." />
+<meta name="twitter:image" content="https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG.png" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="Eric" />
+<meta name="twitter:label2" content="Time to read" />
+<meta name="twitter:data2" content="Less than a minute" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://www.pngmart.com/#person","name":"PNG Mart"},{"@type":"WebSite","@id":"https://www.pngmart.com/#website","url":"https://www.pngmart.com","name":"PNG Mart","publisher":{"@id":"https://www.pngmart.com/#person"},"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG.png","url":"https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG.png","width":"1280","height":"1280","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.pngmart.com/image/505763#webpage","url":"https://www.pngmart.com/image/505763","name":"Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG","datePublished":"2024-11-04T00:00:00+00:00","dateModified":"2024-11-04T00:00:00+00:00","isPartOf":{"@id":"https://www.pngmart.com/#website"},"primaryImageOfPage":{"@id":"https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG.png"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://www.pngmart.com/image/505763#author","name":"Eric","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/58a54a21048b0d87b5abc7d65004b776?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/58a54a21048b0d87b5abc7d65004b776?s=96&amp;d=mm&amp;r=g","caption":"Eric","inLanguage":"en-US"}},{"@type":"BlogPosting","headline":"Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG","datePublished":"2024-11-04T00:00:00+00:00","dateModified":"2024-11-04T00:00:00+00:00","articleSection":"Celeste Game","author":{"@id":"https://www.pngmart.com/image/505763#author","name":"Eric"},"publisher":{"@id":"https://www.pngmart.com/#person"},"description":"Download free Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG in high-quality transparent resolution for personal design projects.","name":"Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG","@id":"https://www.pngmart.com/image/505763#richSnippet","isPartOf":{"@id":"https://www.pngmart.com/image/505763#webpage"},"image":{"@id":"https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG.png"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://www.pngmart.com/image/505763#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='//www.pngmart.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="PNG Mart &raquo; Feed" href="https://www.pngmart.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="PNG Mart &raquo; Comments Feed" href="https://www.pngmart.com/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="PNG Mart &raquo; Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG Comments Feed" href="https://www.pngmart.com/image/505763/feed" />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.pngmart.com/wp-includes/css/dist/block-library/style.min.css?ver=792c6e2ed092bd458a92f04594c4f07a' type='text/css' media='all' />
+<style id='rank-math-toc-block-style-inline-css' type='text/css'>
+.wp-block-rank-math-toc-block nav ol{counter-reset:item}.wp-block-rank-math-toc-block nav ol li{display:block}.wp-block-rank-math-toc-block nav ol li:before{content:counters(item, ".") ". ";counter-increment:item}
+
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='wp-pagenavi-css' href='https://www.pngmart.com/wp-content/cache/min/1/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=1731061050' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='main-css-css' href='https://www.pngmart.com/wp-content/cache/min/1/wp-content/themes/pngmart/main.css?ver=1731061050' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='custom-css-css' href='https://www.pngmart.com/wp-content/cache/min/1/wp-content/themes/pngmart/custom.css?ver=1731061050' type='text/css' media='all' />
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.pngmart.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.pngmart.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.pngmart.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.pngmart.com/wp-json/wp/v2/posts/505763" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.pngmart.com/xmlrpc.php?rsd" />
+
+<link rel='shortlink' href='https://www.pngmart.com/?p=505763' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.pngmart.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pngmart.com%2Fimage%2F505763" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.pngmart.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pngmart.com%2Fimage%2F505763&#038;format=xml" />
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script type="rocketlazyloadscript">
+	jQuery(document).ready( function() {
+		jQuery('#wrapper').css('margin-top',jQuery('#navigation').height());
+	});
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.pngmart.com/wp-content/cache/min/1/ajax/libs/jquery/3.1.1/jquery.min.js?ver=1731061050"></script> 
+<strong><!-- Google tag (gtag.js) -->
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-RJGBZ77XPQ"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RJGBZ77XPQ');
+</script></strong>
+</head>
+
+<body class="post-template-default single single-post postid-505763 single-format-standard bg singular">
+  <style>
+._bsa_flexbar .flexbar-logo img { background: none; }
+</style><script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<script>
+(function(){
+	if(typeof _bsa !== 'undefined' && _bsa) {
+  		// format, zoneKey, segment:value, options
+  		_bsa.init('flexbar', 'CK7DC2JN', 'placement:pngmartcom');
+  	}
+})();
+</script>
+<script type="rocketlazyloadscript" async data-cfasync="false">
+  (function() {
+      const url = new URL(window.location.href);
+      const clickID = url.searchParams.get("click_id");
+      const sourceID = url.searchParams.get("source_id");
+
+      const s = document.createElement("script");
+      s.dataset.cfasync = "false";
+      s.src = "https://push-sdk.net/f/sdk.js?z=413224";
+      s.onload = (opts) => {
+          opts.zoneID = 413224;
+          opts.extClickID = clickID;
+          opts.subID1 = sourceID;
+          opts.actions.onPermissionGranted = () => {};
+          opts.actions.onPermissionDenied = () => {};
+          opts.actions.onAlreadySubscribed = () => {};
+          opts.actions.onError = () => {};
+      };
+      document.head.appendChild(s);
+  })()
+</script>
+		<div id="navigation"  role="banner">
+
+			<nav id="access" class="container_16 containermargin" role="navigation">
+			<div class="nav1">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link screen-reader-text"><a class="assistive-text" href="#content" title="Skip to primary content">Skip to primary content</a></div>
+                <div id="mobilemenu" class="notonscreen">
+                    <div align="center" style="padding:10px;">
+                    	<a href="https://www.pngmart.com/" title="PNG Mart">
+                    	                        	        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2030'%3E%3C/svg%3E" alt="PNG Mart" width="200" height="30" data-lazy-src="/logo.jpg"><noscript><img src="/logo.jpg" alt="PNG Mart" width="200" height="30"></noscript>
+                    	                            </a>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="sf-logomenu notonmobile">
+                    <p>
+                    	<a href="https://www.pngmart.com/">
+                    		                    	        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2030'%3E%3C/svg%3E" alt="PNG Mart" width="200" height="30" data-lazy-src="/logo.jpg"><noscript><img src="/logo.jpg" alt="PNG Mart" width="200" height="30"></noscript>
+                    	                            </a>
+                    </p>
+                </div>
+								<div class="menu-top-container"><ul id="primary" class="s_style sf-menu sf-js-enabled sf-arrows"><li id="menu-item-102574" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102574"><a href="/">Home</a></li>
+<li id="menu-item-102573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102573"><a href="https://www.pngmart.com/categories">Categories</a></li>
+<li id="menu-item-130852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130852"><a href="https://www.pngmart.com/contact">Contact</a></li>
+<li id="menu-item-335071" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-335071"><a href="https://www.pngmart.com/upload">Upload</a></li>
+</ul></div>
+				<ul id="iconmenu" class="sf-menu sf-js-enabled">
+                    <li id="searchicon" class="notonmobile icon-search"><a href="" class="sf-with-ul"></a>
+                        <ul id="searchul" class="sub-menu" style="left: auto; right: 0px;">
+                            <li><form role="search" method="get" id="searchform" class="searchform" action="https://www.pngmart.com">
+    <div>
+    <label class="screen-reader-text" for="s">Search for:</label>
+    <input type="text" value="" name="s" id="s">
+    <input type="submit" id="searchsubmit" value="Go">
+    </div>
+</form>
+</li>
+                        </ul>
+                    </li>
+                </ul>								  
+				<div style="clear:both;"></div>
+			</div>
+			</nav><!-- #access -->
+
+	</div><!-- #navigation -->
+	
+	
+    <div id="wrapper" class="hfeed">
+			    <div id="contentcontainer" class="container_16 containermargin">
+        
+
+			<div id="content" class="grid_10" role="main">
+
+						<center><span style="font-size:0.8em">Advertisement</span><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6752320144624820"
+     crossorigin="anonymous"></script>
+<!-- pngmart horizontal responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6752320144624820"
+     data-ad-slot="3885404392"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></center>
+	<header>        
+		<h1 class="entry-title">Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG</h1>
+	</header><!-- .entry-header -->
+
+
+	<div class="entry-content">
+
+<p>Download free Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG in high-quality transparent resolution for personal design projects. This png is available in high-quality resolution for personal use.</p>
+
+<p><center>
+<img width="1280" height="1280" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%201280'%3E%3C/svg%3E" class="attachment-full size-full wp-post-image" alt="Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG" decoding="async" fetchpriority="high" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG.png 1280w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG-80x80.png 80w" data-lazy-sizes="(max-width: 1280px) 100vw, 1280px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG.png" /><noscript><img width="1280" height="1280" src="https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG.png" class="attachment-full size-full wp-post-image" alt="Celeste Game, Platformer, Indie, Pixel Art, Challenges PNG" decoding="async" fetchpriority="high" srcset="https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG.png 1280w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-PNG-80x80.png 80w" sizes="(max-width: 1280px) 100vw, 1280px" /></noscript></center><br>		<br>
+		<center><span style="font-size:0.8em">Advertisement</span><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6752320144624820"
+     crossorigin="anonymous"></script>
+<!-- pngmart horizontal responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6752320144624820"
+     data-ad-slot="3885404392"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></center><strong>PNG Dimension:</strong> 1280x1280<br><strong>File Size:</strong> 191 Kb<br><strong>Image Type:</strong> .png<br>
+<strong>Category:</strong> <a href="https://www.pngmart.com/image/category/gaming" rel="category tag">Gaming</a><br>
+<strong>Tags: <a href="https://www.pngmart.com/image/tag/celeste-game" rel="tag">Celeste Game</a></strong>
+	<br/ >
+	<strong>DMCA</strong>: <a href="/dmca" target="_blank">Report</a>
+	<br/ >
+	<br>
+
+	<center><a href="https://www.pngmart.com/image/505763/png/505762" class="download" target="_blank">Download PNG File</a></center>
+<br>
+
+	</div><!-- .entry-content -->
+	
+
+
+					
+			</div><!-- #content -->
+
+		
+			<div id="sidebar" class="grid_6" role="complementary">
+	<div id="primary" class="widget-area">
+		<div class="xoxo">
+
+			<aside id="search-2" class="widget widget_search"><h3 class="widget-title">Search PNG File</h3><form role="search" method="get" id="searchform" class="searchform" action="https://www.pngmart.com">
+    <div>
+    <label class="screen-reader-text" for="s">Search for:</label>
+    <input type="text" value="" name="s" id="s">
+    <input type="submit" id="searchsubmit" value="Go">
+    </div>
+</form>
+</aside><aside id="custom_html-14" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><center><span style="font-size:0.8em">Advertisement</span><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- mart link ad unit -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6752320144624820"
+     data-ad-slot="5057209545"
+     data-ad-format="link"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center></div></aside><aside id="custom_html-18" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><h3 class="widget-title">Recently Searched PNG</h3>
+<a href="https://www.pngmart.com/image/tag/reptile" target="blank" class="tagbutton" rel="noopener">
+Reptile</a><a href="https://www.pngmart.com/image/tag/stick-figure" target="blank" class="tagbutton" rel="noopener">
+Stick Figure</a><a href="https://www.pngmart.com/image/tag/easter" target="blank" class="tagbutton" rel="noopener">
+Easter</a><a href="https://www.pngmart.com/image/tag/arrow" target="blank" class="tagbutton" rel="noopener">
+Arrow</a><a href="https://www.pngmart.com/image/tag/girl" target="blank" class="tagbutton" rel="noopener">
+Girl</a><a href="https://www.pngmart.com/image/tag/heart" target="blank" class="tagbutton" rel="noopener">
+Heart</a><a href="https://www.pngmart.com/image/tag/final-fantasy" target="blank" class="tagbutton" rel="noopener">
+Final Fantasy</a><a href="https://www.pngmart.com/image/tag/easter-eggs" target="blank" class="tagbutton" rel="noopener">
+Easter Eggs</a><a href="https://www.pngmart.com/image/tag/american-football-team" target="blank" class="tagbutton" rel="noopener">
+American Football Team</a><a href="https://www.pngmart.com/image/tag/antique" target="blank" class="tagbutton" rel="noopener">
+Antique</a><a href="https://www.pngmart.com/image/tag/tekken" target="blank" class="tagbutton" rel="noopener">
+Tekken</a><a href="https://www.pngmart.com/image/tag/christmas" target="blank" class="tagbutton" rel="noopener">
+Christmas</a><a href="https://www.pngmart.com/image/tag/disney" target="blank" class="tagbutton" rel="noopener">
+Disney</a><a href="https://www.pngmart.com/image/tag/hat" target="blank" class="tagbutton" rel="noopener">
+Hat</a><a href="https://www.pngmart.com/image/tag/chair" target="blank" class="tagbutton" rel="noopener">
+Chair</a><a href="https://www.pngmart.com/image/tag/toy" target="blank" class="tagbutton" rel="noopener">
+Toy</a><a href="https://www.pngmart.com/image/tag/star-wars" target="blank" class="tagbutton" rel="noopener">
+Star Wars</a><a href="https://www.pngmart.com/image/tag/dog" target="blank" class="tagbutton" rel="noopener">
+Dog</a><a href="https://www.pngmart.com/image/tag/flowers" target="blank" class="tagbutton" rel="noopener">
+Flowers</a><a href="https://www.pngmart.com/image/tag/naruto" target="blank" class="tagbutton" rel="noopener">
+Naruto</a><a href="https://www.pngmart.com/image/tag/halloween" target="blank" class="tagbutton" rel="noopener">
+Halloween</a><a href="https://www.pngmart.com/image/tag/abstract" target="blank" class="tagbutton" rel="noopener">
+Abstract</a><a href="https://www.pngmart.com/image/tag/wwe" target="blank" class="tagbutton" rel="noopener">
+WWE</a><a href="https://www.pngmart.com/image/tag/spring" target="blank" class="tagbutton" rel="noopener">
+Spring</a><a href="https://www.pngmart.com/image/tag/tv-shows" target="blank" class="tagbutton" rel="noopener">
+TV Shows</a></div></aside>		</div><!-- .xoxo -->
+	</div><!-- .widget-area -->
+</div><!-- #sidebar .widget-area -->
+<div style="clear:both;"></div>
+	      <center><h3 class="related-png">Similar PNG:</h3></center>
+        <div id="related-posts" class="new-container">
+            <div id="related-posts-container">
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505667">
+                                                            <img width="900" height="900" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20900'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Challenging, Platformer, Pixel Art, Story-Driven PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Background.png 900w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-Background-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-Background-80x80.png 80w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Background.png" /><noscript><img width="900" height="900" src="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Background.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Challenging, Platformer, Pixel Art, Story-Driven PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Background.png 900w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-Background-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-Background-80x80.png 80w" sizes="(max-width: 900px) 100vw, 900px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Challenging, Platformer, Pixel Art, Story-Driven PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505777">
+                                                            <img width="894" height="894" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20894%20894'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Exploration, Challenging, Pixel Art, Story-driven PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Free-Download.png 894w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Free-Download-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Free-Download-80x80.png 80w" data-lazy-sizes="(max-width: 894px) 100vw, 894px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Free-Download.png" /><noscript><img width="894" height="894" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Free-Download.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Exploration, Challenging, Pixel Art, Story-driven PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Free-Download.png 894w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Free-Download-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Free-Download-80x80.png 80w" sizes="(max-width: 894px) 100vw, 894px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Exploration, Challenging, Pixel Art, Story-driven PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505816">
+                                                            <img width="512" height="512" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Adventure, Challenging, Indie, Exploration PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photos.png 512w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photos-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photos-80x80.png 80w" data-lazy-sizes="(max-width: 512px) 100vw, 512px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photos.png" /><noscript><img width="512" height="512" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photos.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Adventure, Challenging, Indie, Exploration PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photos.png 512w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photos-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photos-80x80.png 80w" sizes="(max-width: 512px) 100vw, 512px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Adventure, Challenging, Indie, Exploration PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505681">
+                                                            <img width="1200" height="1200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%201200'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Story-driven, Adventure, Platformer, Pixel Art PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-Background-Isolated-PNG.png 1200w, https://www.pngmart.com/files/22/Celeste-Game-Background-Isolated-PNG-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-Background-Isolated-PNG-80x80.png 80w" data-lazy-sizes="(max-width: 1200px) 100vw, 1200px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-Background-Isolated-PNG.png" /><noscript><img width="1200" height="1200" src="https://www.pngmart.com/files/22/Celeste-Game-Background-Isolated-PNG.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Story-driven, Adventure, Platformer, Pixel Art PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-Background-Isolated-PNG.png 1200w, https://www.pngmart.com/files/22/Celeste-Game-Background-Isolated-PNG-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-Background-Isolated-PNG-80x80.png 80w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Story-driven, Adventure, Platformer, Pixel Art PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505663">
+                                                            <img width="950" height="708" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20950%20708'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Adventure, Pixel Art, Platformer, Challenging PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Picture.png 950w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Picture-200x149.png 200w" data-lazy-sizes="(max-width: 950px) 100vw, 950px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Picture.png" /><noscript><img width="950" height="708" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Picture.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Adventure, Pixel Art, Platformer, Challenging PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Picture.png 950w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Picture-200x149.png 200w" sizes="(max-width: 950px) 100vw, 950px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Adventure, Pixel Art, Platformer, Challenging PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505701">
+                                                            <img width="800" height="800" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Adventure, Exploration, Challenges PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Isolated-PNG.png 800w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-Isolated-PNG-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-Isolated-PNG-80x80.png 80w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Isolated-PNG.png" /><noscript><img width="800" height="800" src="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Isolated-PNG.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Adventure, Exploration, Challenges PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Isolated-PNG.png 800w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-Isolated-PNG-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-Isolated-PNG-80x80.png 80w" sizes="(max-width: 800px) 100vw, 800px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Platformer, Adventure, Exploration, Challenges PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505657">
+                                                            <img width="1051" height="598" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201051%20598'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Storytelling, Platformer, Indie, Adventure PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent.png 1051w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-200x114.png 200w" data-lazy-sizes="(max-width: 1051px) 100vw, 1051px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent.png" /><noscript><img width="1051" height="598" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Storytelling, Platformer, Indie, Adventure PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent.png 1051w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-200x114.png 200w" sizes="(max-width: 1051px) 100vw, 1051px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Storytelling, Platformer, Indie, Adventure PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505827">
+                                                            <img width="945" height="1275" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20945%201275'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Story-driven, Platformer, Adventure, Pixel Art PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD-Pictures.png 945w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD-Pictures-148x200.png 148w" data-lazy-sizes="(max-width: 945px) 100vw, 945px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD-Pictures.png" /><noscript><img width="945" height="1275" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD-Pictures.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Story-driven, Platformer, Adventure, Pixel Art PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD-Pictures.png 945w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD-Pictures-148x200.png 148w" sizes="(max-width: 945px) 100vw, 945px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Story-driven, Platformer, Adventure, Pixel Art PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505755">
+                                                            <img width="1280" height="1152" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%201152'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Indie, Adventure, Mountain PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD.png 1280w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD-200x180.png 200w" data-lazy-sizes="(max-width: 1280px) 100vw, 1280px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD.png" /><noscript><img width="1280" height="1152" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Indie, Adventure, Mountain PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD.png 1280w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-HD-200x180.png 200w" sizes="(max-width: 1280px) 100vw, 1280px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Platformer, Indie, Adventure, Mountain PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505719">
+                                                            <img width="500" height="500" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Indie, Challenging, Adventure PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-File.png 500w, https://www.pngmart.com/files/22/Celeste-Game-PNG-File-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-File-80x80.png 80w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-File.png" /><noscript><img width="500" height="500" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-File.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Indie, Challenging, Adventure PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-File.png 500w, https://www.pngmart.com/files/22/Celeste-Game-PNG-File-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-File-80x80.png 80w" sizes="(max-width: 500px) 100vw, 500px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Platformer, Indie, Challenging, Adventure PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505651">
+                                                            <img width="1383" height="1536" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201383%201536'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Indie, Adventure, Challenge, Platformer PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG.png 1383w, https://www.pngmart.com/files/22/Celeste-Game-PNG-180x200.png 180w" data-lazy-sizes="(max-width: 1383px) 100vw, 1383px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG.png" /><noscript><img width="1383" height="1536" src="https://www.pngmart.com/files/22/Celeste-Game-PNG.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Indie, Adventure, Challenge, Platformer PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG.png 1383w, https://www.pngmart.com/files/22/Celeste-Game-PNG-180x200.png 180w" sizes="(max-width: 1383px) 100vw, 1383px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Indie, Adventure, Challenge, Platformer PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505693">
+                                                            <img width="1230" height="1546" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201230%201546'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Challenges, Platformer, Exploration, Speedrunning PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Transparent.png 1230w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Transparent-159x200.png 159w" data-lazy-sizes="(max-width: 1230px) 100vw, 1230px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Transparent.png" /><noscript><img width="1230" height="1546" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Transparent.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Challenges, Platformer, Exploration, Speedrunning PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Transparent.png 1230w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Transparent-159x200.png 159w" sizes="(max-width: 1230px) 100vw, 1230px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Challenges, Platformer, Exploration, Speedrunning PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505821">
+                                                            <img width="684" height="888" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20684%20888'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Mountain, Challenging, Adventure PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Clipart.png 684w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Clipart-154x200.png 154w" data-lazy-sizes="(max-width: 684px) 100vw, 684px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Clipart.png" /><noscript><img width="684" height="888" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Clipart.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Mountain, Challenging, Adventure PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Clipart.png 684w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Clipart-154x200.png 154w" sizes="(max-width: 684px) 100vw, 684px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Platformer, Mountain, Challenging, Adventure PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505687">
+                                                            <img width="752" height="1063" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20752%201063'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Pixel Art, Platformer, Adventure, Story-Driven PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Picture.png 752w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Picture-141x200.png 141w" data-lazy-sizes="(max-width: 752px) 100vw, 752px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Picture.png" /><noscript><img width="752" height="1063" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Picture.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Pixel Art, Platformer, Adventure, Story-Driven PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Picture.png 752w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Picture-141x200.png 141w" sizes="(max-width: 752px) 100vw, 752px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Pixel Art, Platformer, Adventure, Story-Driven PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505715">
+                                                            <img width="500" height="450" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20450'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Indie, Pixel Art, Story-Driven, Platformer PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Pic.png 500w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Pic-200x180.png 200w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Pic.png" /><noscript><img width="500" height="450" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Pic.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Indie, Pixel Art, Story-Driven, Platformer PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Pic.png 500w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Pic-200x180.png 200w" sizes="(max-width: 500px) 100vw, 500px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Indie, Pixel Art, Story-Driven, Platformer PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505797">
+                                                            <img width="1454" height="2063" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201454%202063'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Adventure, Challenge, Indie, Storytelling PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photo.png 1454w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photo-141x200.png 141w" data-lazy-sizes="(max-width: 1454px) 100vw, 1454px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photo.png" /><noscript><img width="1454" height="2063" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photo.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Adventure, Challenge, Indie, Storytelling PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photo.png 1454w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Photo-141x200.png 141w" sizes="(max-width: 1454px) 100vw, 1454px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Adventure, Challenge, Indie, Storytelling PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505841">
+                                                            <img width="950" height="950" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20950%20950'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Indie, Platformer, Challenge, Exploration PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Image.png 950w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Image-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Image-80x80.png 80w" data-lazy-sizes="(max-width: 950px) 100vw, 950px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Image.png" /><noscript><img width="950" height="950" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Image.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Indie, Platformer, Challenge, Exploration PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Image.png 950w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Image-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Transparent-Image-80x80.png 80w" sizes="(max-width: 950px) 100vw, 950px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Indie, Platformer, Challenge, Exploration PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505743">
+                                                            <img width="1280" height="720" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20720'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Story-Driven, Pixel Art, Challenging, Adventure PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Clipart.png 1280w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Clipart-200x113.png 200w" data-lazy-sizes="(max-width: 1280px) 100vw, 1280px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Clipart.png" /><noscript><img width="1280" height="720" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Clipart.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Story-Driven, Pixel Art, Challenging, Adventure PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Clipart.png 1280w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Clipart-200x113.png 200w" sizes="(max-width: 1280px) 100vw, 1280px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Story-Driven, Pixel Art, Challenging, Adventure PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505675">
+                                                            <img width="2200" height="1800" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202200%201800'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Pixel Art, Challenging, Exploration PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Images-PNG.png 2200w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-Images-PNG-200x164.png 200w" data-lazy-sizes="(max-width: 2200px) 100vw, 2200px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Images-PNG.png" /><noscript><img width="2200" height="1800" src="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Images-PNG.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Pixel Art, Challenging, Exploration PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-Transparent-Images-PNG.png 2200w, https://www.pngmart.com/files/22/Celeste-Game-Transparent-Images-PNG-200x164.png 200w" sizes="(max-width: 2200px) 100vw, 2200px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Platformer, Pixel Art, Challenging, Exploration PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505831">
+                                                            <img width="623" height="863" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20623%20863'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Exploration, Story, Platformer, Pixel Art PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Background-Image.png 623w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Background-Image-144x200.png 144w" data-lazy-sizes="(max-width: 623px) 100vw, 623px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Background-Image.png" /><noscript><img width="623" height="863" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Background-Image.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Exploration, Story, Platformer, Pixel Art PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Background-Image.png 623w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Background-Image-144x200.png 144w" sizes="(max-width: 623px) 100vw, 623px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Exploration, Story, Platformer, Pixel Art PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505727">
+                                                            <img width="500" height="629" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20629'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Exploration, Adventure, Storytelling PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Photo.png 500w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Photo-159x200.png 159w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Photo.png" /><noscript><img width="500" height="629" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Photo.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Exploration, Adventure, Storytelling PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Photo.png 500w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Photo-159x200.png 159w" sizes="(max-width: 500px) 100vw, 500px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Platformer, Exploration, Adventure, Storytelling PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505733">
+                                                            <img width="693" height="1212" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20693%201212'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Exploration, Adventure, Challenging, Narrative PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Photos.png 693w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Photos-114x200.png 114w" data-lazy-sizes="(max-width: 693px) 100vw, 693px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Photos.png" /><noscript><img width="693" height="1212" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Photos.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Exploration, Adventure, Challenging, Narrative PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Photos.png 693w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Photos-114x200.png 114w" sizes="(max-width: 693px) 100vw, 693px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Exploration, Adventure, Challenging, Narrative PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505773">
+                                                            <img width="1000" height="1000" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201000%201000'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Adventure, Pixel Art, Platformer, Exploration PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-File.png 1000w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-File-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-File-80x80.png 80w" data-lazy-sizes="(max-width: 1000px) 100vw, 1000px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-File.png" /><noscript><img width="1000" height="1000" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-File.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Adventure, Pixel Art, Platformer, Exploration PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-File.png 1000w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-File-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-File-80x80.png 80w" sizes="(max-width: 1000px) 100vw, 1000px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Adventure, Pixel Art, Platformer, Exploration PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505707">
+                                                            <img width="640" height="640" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20640'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Pixel Art, Story-Driven, Emotion, Adventure PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-HD.png 640w, https://www.pngmart.com/files/22/Celeste-Game-PNG-HD-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-HD-80x80.png 80w" data-lazy-sizes="(max-width: 640px) 100vw, 640px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-HD.png" /><noscript><img width="640" height="640" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-HD.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Pixel Art, Story-Driven, Emotion, Adventure PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-HD.png 640w, https://www.pngmart.com/files/22/Celeste-Game-PNG-HD-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-HD-80x80.png 80w" sizes="(max-width: 640px) 100vw, 640px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Pixel Art, Story-Driven, Emotion, Adventure PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505749">
+                                                            <img width="1280" height="800" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20800'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Story-Driven, Platformer, Pixel Art, Challenging PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Picture.png 1280w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Picture-200x125.png 200w" data-lazy-sizes="(max-width: 1280px) 100vw, 1280px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Picture.png" /><noscript><img width="1280" height="800" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Picture.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Story-Driven, Platformer, Pixel Art, Challenging PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Picture.png 1280w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Picture-200x125.png 200w" sizes="(max-width: 1280px) 100vw, 1280px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Story-Driven, Platformer, Pixel Art, Challenging PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505769">
+                                                            <img width="1400" height="1146" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%201146'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Pixel Art, Indie, Exploration, Story-Driven PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Pic.png 1400w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Pic-200x164.png 200w" data-lazy-sizes="(max-width: 1400px) 100vw, 1400px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Pic.png" /><noscript><img width="1400" height="1146" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Pic.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Pixel Art, Indie, Exploration, Story-Driven PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Pic.png 1400w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Pic-200x164.png 200w" sizes="(max-width: 1400px) 100vw, 1400px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Pixel Art, Indie, Exploration, Story-Driven PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505725">
+                                                            <img width="500" height="500" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Indie, Platformer, Pixel Art, Adventure PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Image.png 500w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Image-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Image-80x80.png 80w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Image.png" /><noscript><img width="500" height="500" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Image.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Indie, Platformer, Pixel Art, Adventure PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Image.png 500w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Image-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Image-80x80.png 80w" sizes="(max-width: 500px) 100vw, 500px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Indie, Platformer, Pixel Art, Adventure PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505787">
+                                                            <img width="800" height="1246" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%201246'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Speedrun, Narrative, Pixel Art, Adventure PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Image.png 800w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Image-128x200.png 128w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Image.png" /><noscript><img width="800" height="1246" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Image.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Speedrun, Narrative, Pixel Art, Adventure PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Image.png 800w, https://www.pngmart.com/files/22/Celeste-Game-PNG-Isolated-Image-128x200.png 128w" sizes="(max-width: 800px) 100vw, 800px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Speedrun, Narrative, Pixel Art, Adventure PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505809">
+                                                            <img width="512" height="513" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20513'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Pixel Art, Challenging, Narrative PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-Download-PNG-Image.png 512w, https://www.pngmart.com/files/22/Celeste-Game-Download-PNG-Image-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-Download-PNG-Image-80x80.png 80w" data-lazy-sizes="(max-width: 512px) 100vw, 512px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-Download-PNG-Image.png" /><noscript><img width="512" height="513" src="https://www.pngmart.com/files/22/Celeste-Game-Download-PNG-Image.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Pixel Art, Challenging, Narrative PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-Download-PNG-Image.png 512w, https://www.pngmart.com/files/22/Celeste-Game-Download-PNG-Image-200x200.png 200w, https://www.pngmart.com/files/22/Celeste-Game-Download-PNG-Image-80x80.png 80w" sizes="(max-width: 512px) 100vw, 512px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Platformer, Pixel Art, Challenging, Narrative PNG                           
+                        </div>
+                    </div>
+                                    <div class="attachment-box">
+                        <a href="https://www.pngmart.com/image/505759">
+                                                            <img width="1280" height="1132" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%201132'%3E%3C/svg%3E" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Indie, Story-driven, Pixel Art PNG" decoding="async" data-lazy-srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-HD-Isolated.png 1280w, https://www.pngmart.com/files/22/Celeste-Game-PNG-HD-Isolated-200x177.png 200w" data-lazy-sizes="(max-width: 1280px) 100vw, 1280px" data-lazy-src="https://www.pngmart.com/files/22/Celeste-Game-PNG-HD-Isolated.png" /><noscript><img width="1280" height="1132" src="https://www.pngmart.com/files/22/Celeste-Game-PNG-HD-Isolated.png" class="attachment-medium size-medium wp-post-image" alt="Celeste Game, Platformer, Indie, Story-driven, Pixel Art PNG" decoding="async" srcset="https://www.pngmart.com/files/22/Celeste-Game-PNG-HD-Isolated.png 1280w, https://www.pngmart.com/files/22/Celeste-Game-PNG-HD-Isolated-200x177.png 200w" sizes="(max-width: 1280px) 100vw, 1280px" /></noscript>                                                    </a>
+                        <div class="attachment-title">
+                          
+                                Celeste Game, Platformer, Indie, Story-driven, Pixel Art PNG                           
+                        </div>
+                    </div>
+                            </div>
+        </div>
+        <br>
+
+	</div><!-- #contentcontainer -->
+
+</div><!-- #wrapper -->
+
+<div id="footer">
+	<div id="colophon" class="container_16 containermargin" role="contentinfo">
+		<div id="footer-info">
+			<div id="copyright">&copy; 2016 - 2024. <a href="/" title="PNG Mart">PNG Mart</a></div>
+			<div class="menu footernav"><ul id="menu-footer-navigation" class="menu"><li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="/">Home</a></li>
+<li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://www.pngmart.com/about">About</a></li>
+<li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="https://www.pngmart.com/contact">Contact</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="https://www.pngmart.com/copyright-policy">Copyright</a></li>
+<li id="menu-item-189723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189723"><a href="https://www.pngmart.com/cookie-policy">Cookie Policy</a></li>
+<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="https://www.pngmart.com/privacy-policy">Privacy</a></li>
+<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="https://www.pngmart.com/terms-conditions">Terms &#038; Conditions</a></li>
+<li id="menu-item-142703" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-142703"><a href="/upload">Upload PNG</a></li>
+<li id="menu-item-59360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59360"><a href="/sitemap.xml">Sitemap</a></li>
+</ul></div>		</div>
+		<div class="clear"></div>
+		<div id="site-generator">
+			
+		</div>
+	</div><!-- #colophon -->
+	<div style="clear:both;"></div>
+</div><!-- #footer -->
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.pngmart.com/wp-includes/js/comment-reply.min.js?ver=792c6e2ed092bd458a92f04594c4f07a" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" id="test_57913-js-extra">
+/* <![CDATA[ */
+var test_57913_obj = {"ajaxurl":"https:\/\/www.pngmart.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="test_57913-js-after">
+/* <![CDATA[ */
+jQuery( '#wp-admin-bar-toggle-wp_attachment_pages_enabled' ).on( 'click', function() {
+			jQuery.post(
+				test_57913_obj.ajaxurl,
+				{
+					action: 'toggle_attachment_pages',
+					to: jQuery( '#wp-admin-bar-toggle-wp_attachment_pages_enabled' ).text() === 'Enable Attachment Pages' ? 1 : 0
+				},
+				function() {
+					if ( jQuery( '#wp-admin-bar-toggle-wp_attachment_pages_enabled' ).html().includes( 'Enable' ) ) {
+						jQuery( '#wp-admin-bar-toggle-wp_attachment_pages_enabled' ).html( jQuery( '#wp-admin-bar-toggle-wp_attachment_pages_enabled' ).html().replace( 'Enable', 'Disable' ) );
+					} else {
+						jQuery( '#wp-admin-bar-toggle-wp_attachment_pages_enabled' ).html( jQuery( '#wp-admin-bar-toggle-wp_attachment_pages_enabled' ).html().replace( 'Disable', 'Enable' ) );
+					}
+				}
+			);
+		} );
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.pngmart.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.pngmart.com/wp-content/cache/min/1/wp-content/themes/pngmart/js/html5.js?ver=1731061050" id="html5-js"></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.pngmart.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script></body>
+</html><!--
+Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com
+
+Retrieved 2702 objects (611 KB) from Redis using PhpRedis (v6.0.2).
+-->
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
