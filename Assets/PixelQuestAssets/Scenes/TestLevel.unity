@@ -623,7 +623,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -8786,11 +8786,11 @@ PolygonCollider2D:
       - {x: 0.10465574, y: 8.081709}
       - {x: -9.131651, y: 8.175645}
       - {x: -8.890479, y: -0.791574}
-      - {x: 6.998048, y: -0.9207635}
-      - {x: 7.1843424, y: -2.8876796}
-      - {x: 10.878939, y: -2.9544613}
-      - {x: 248.30382, y: -39.944954}
-      - {x: 238.1015, y: 35.73423}
+      - {x: -10.706448, y: -4.7377276}
+      - {x: 7.0263567, y: -8.733108}
+      - {x: 11.668861, y: -7.167383}
+      - {x: 215.71117, y: -30.236507}
+      - {x: 232.41513, y: 27.69009}
   m_UseDelaunayMesh: 0
 --- !u!4 &1163979339
 Transform:
@@ -24296,11 +24296,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8663685759550221283, guid: 15d8728af54bbdd418bf61d770237d22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 194.6
+      value: 193.95
       objectReference: {fileID: 0}
     - target: {fileID: 8663685759550221283, guid: 15d8728af54bbdd418bf61d770237d22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.5
+      value: 12.26
       objectReference: {fileID: 0}
     - target: {fileID: 8663685759550221283, guid: 15d8728af54bbdd418bf61d770237d22, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24453,7 +24453,7 @@ MonoBehaviour:
   m_Follow: {fileID: 659444377}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 4
+    OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
