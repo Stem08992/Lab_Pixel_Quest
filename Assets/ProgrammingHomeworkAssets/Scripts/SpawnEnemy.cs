@@ -17,7 +17,7 @@ public class SpawnEnemy : MonoBehaviour
     private bool _canSpawn = true;     //Tells us if we can shoot or not 
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         EnemySpawnTimer();
         EnemySpawn();
