@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class GeoController : MonoBehaviour
 {
-    string String = "Hello ";
-    int burger = 3;
-    // Start is called before the first frame update
-    void Start()
+    public class GeoScript : MonoBehaviour
     {
+        string String = "Hello ";
+        int burger = 3;
+        // Start is called before the first frame update
+        void Start()
+        {
+            Debug.Log("Hello world");
 
-        Debug.Log("Hello World");
-        string String2 = "World";
-        Debug.Log(String+String2);
+            int x = 1;
+            int z = 3;
+            Debug.Log(z);
+            z++;
 
+            if (x == 1)
+            {
+                Debug.Log(z + 1);
+            }
+            z++;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(burger);
-        burger++;
-    }
 }
