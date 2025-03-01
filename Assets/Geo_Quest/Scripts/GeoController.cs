@@ -1,29 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.U2D.Aseprite;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GeoController : MonoBehaviour
 {
-    public class GeoScript : MonoBehaviour
+    private Rigidbody2D rb;
+    public int speed = 3;
+    public string nextLevel = "Scene_2";
+
+    public SpriteRenderer spriteRenderer;
+
+    void Start()
     {
-        string String = "Hello ";
-        int burger = 3;
-        // Start is called before the first frame update
-        void Start()
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        float xInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(xInput * speed, rb.velocity.y);
+        changeColor();
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.tag)
         {
-            Debug.Log("Hello world");
-
-            int x = 1;
-            int z = 3;
-            Debug.Log(z);
-            z++;
-
-            if (x == 1)
-            {
-                Debug.Log(z + 1);
-            }
-            z++;
+            case "Death":
+                {
+                    string thisLevel = SceneManager.GetActiveScene().name;
+                    SceneManager.LoadScene(thisLevel);
+                    break;
+                }
+            case "Finish":
+                {
+                    SceneManager.LoadScene(nextLevel);
+                    break;
+                }
         }
     }
 
+    public void changeColor()
+    {
+        if (Input.GetKeyDown((KeyCode.Alpha1))){
+            spriteRenderer.color = new Color(184, 136, 136);
+        } else if (Input.GetKeyDown((KeyCode.Alpha2))){
+            spriteRenderer.color = new Color(91, 119, 143);
+        } else if (Input.GetKeyDown((KeyCode.Alpha3))){
+            spriteRenderer.color = new Color(90,117, 82);
+        }
+    }
 }
