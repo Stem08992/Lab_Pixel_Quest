@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class LevelTwo : MonoBehaviour
 {
     public float amount = 2f;
     public float jumpAmount = 5f;
 
     private bool coin = false;
     private bool next = false;
+
+    public string Level2 = "Scene_2";
 
     Rigidbody2D rb;
     void Start()
@@ -21,12 +22,12 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         float xInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2 (xInput * amount, rb.velocity.y);
+        rb.velocity = new Vector2(xInput * amount, rb.velocity.y);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpAmount);
         }
-       
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,24 +35,27 @@ public class NewBehaviourScript : MonoBehaviour
         {
             case "Death":
                 {
+                    Debug.Log("Touched");
                     coin = false;
-                    string level = SceneManager.GetActiveScene().name;
-                    SceneManager.LoadScene(level);
+                    string level2 = SceneManager.GetActiveScene().name;
+                    SceneManager.LoadScene(level2);
                     break;
                 }
-            case "coin":
+            case "Coin":
                 {
                     coin = true;
+
                     break;
                 }
+
+
             case "Finish":
                 {
                     if (coin == true)
                     {
-                        string level2 = SceneManager.GetActiveScene().name;
-                        SceneManager.LoadScene(level2);
+                        SceneManager.LoadScene(Level2);
                     }
-                break;
+                    break;
                 }
         }
     }
