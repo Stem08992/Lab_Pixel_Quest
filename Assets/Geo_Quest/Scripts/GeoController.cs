@@ -38,6 +38,7 @@ public class GeoController : MonoBehaviour
             case "Finish":
                 {
                     SceneManager.LoadScene(nextLevel);
+                    nextLevel = "Scene_3";
                     break;
                 }
         }
