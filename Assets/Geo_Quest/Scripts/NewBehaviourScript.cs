@@ -13,7 +13,7 @@ public class NewBehaviourScript : MonoBehaviour
     public float amount = 2f;
     public float jumpAmount = 5f;
 
-    private bool coin = false;
+    private float points = 0f; 
 
     public string Level2 = "Scene_2";
 
@@ -32,6 +32,10 @@ public class NewBehaviourScript : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpAmount);
         }
+        if (points >= 3f)
+        {
+             TextMeshPro.text = "Objective: Go Next Level";
+        }
        
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,25 +44,26 @@ public class NewBehaviourScript : MonoBehaviour
         {
             case "Death":
                 {
-                    coin = false;
+                    points = 0f;
                     string level = SceneManager.GetActiveScene().name;
                     SceneManager.LoadScene(level);
                     break;
                 }
             case "Coin":
                 {
-                    coin = true;
-                    TextMeshPro.text = "Objective: Go Next Level";
+                    points += 1f;
+                    
                     break;
                 }
 
 
             case "Finish":
                 {
-                if (coin == true)
+                    if (points >= 3f)
                     {
-                    SceneManager.LoadScene(Level2);
+                        SceneManager.LoadScene(Level2);
                     }
+                    
                     break;
                 }
         }
