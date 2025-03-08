@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    public TextMeshPro TextMeshPro;
+    
     public float amount = 2f;
     public float jumpAmount = 5f;
 
     private bool coin = false;
-    private bool next = false;
 
     public string Level2 = "Scene_2";
 
@@ -18,6 +21,7 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        TextMeshPro.text = "Objective: Get Coin";
     }
 
     void Update()
@@ -43,8 +47,8 @@ public class NewBehaviourScript : MonoBehaviour
                 }
             case "Coin":
                 {
-                    coin = true; 
-
+                    coin = true;
+                    TextMeshPro.text = "Objective: Go Next Level";
                     break;
                 }
 

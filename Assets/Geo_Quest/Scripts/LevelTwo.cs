@@ -9,7 +9,6 @@ public class LevelTwo : MonoBehaviour
     public float jumpAmount = 5f;
 
     private bool coin = false;
-    private bool next = false;
 
     public string Level2 = "Scene_2";
 
