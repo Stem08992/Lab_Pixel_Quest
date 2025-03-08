@@ -48,9 +48,11 @@ public class GeoController : MonoBehaviour
     {
         if (Input.GetKeyDown((KeyCode.Alpha1))){
             spriteRenderer.color = new Color(184, 136, 136);
-        } else if (Input.GetKeyDown((KeyCode.Alpha2))){
+        } 
+        if (Input.GetKeyDown((KeyCode.Alpha2))){
             spriteRenderer.color = new Color(91, 119, 143);
-        } else if (Input.GetKeyDown((KeyCode.Alpha3))){
+        } 
+        if (Input.GetKeyDown((KeyCode.Alpha3))){
             spriteRenderer.color = new Color(90,117, 82);
         }
     }
