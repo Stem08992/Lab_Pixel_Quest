@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.U2D.Aseprite;
@@ -47,6 +48,7 @@ public class GeoController : MonoBehaviour
     public void changeColor()
     {
         if (Input.GetKeyDown((KeyCode.Alpha1))){
+            Debug.Log("Working");
             spriteRenderer.color = new Color(184, 136, 136);
         } 
         if (Input.GetKeyDown((KeyCode.Alpha2))){
