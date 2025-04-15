@@ -1,48 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class simplemovementg : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
-    private float Move;
-    public float jump;
+    public float moveSpeed = 5f;
+    public Animator animator;
+    public Rigidbody2D rb;
 
-    private Rigidbody2D rb;
+    Vector2 movement;
 
-    public bool isJumping;
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        Move = Input.GetAxis("Horizontal");
+        // Get input
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        rb.velocity = new Vector2(Move * speed, rb.velocity.y);
+        // Set Speed parameter in Animator
+        animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        if (Input.GetButtonDown("Jump")&& isJumping == false) 
-        {
-            rb.AddForce(new Vector2(rb.velocity.x, jump));
-        }
+        // Optional: Set direction if using directional animations
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    void FixedUpdate()
     {
-        if (other.gameObject.CompareTag("Floor"))
-        {
-            isJumping = false;
-        }
-    }
-
-    private void OnCollisionExit(Collision other)
-    {
-        if(other.gameObject.CompareTag("Floor"))
-        {
-            isJumping = true;
-        }
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
