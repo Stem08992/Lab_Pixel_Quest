@@ -1,27 +1,26 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement1 : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public Rigidbody2D rb;
-    public Animator animator;
+    private Rigidbody rb;
+    private Vector3 movement;
 
-    Vector2 movement;
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
-        // Collect user input
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
-        // Update Animator parameter
-        Debug.Log(movement.sqrMagnitude);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
+        movement = new Vector3(moveX, 0f, moveZ);
     }
 
     void FixedUpdate()
     {
-        // Move player using physics
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
