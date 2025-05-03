@@ -4,12 +4,12 @@ using UnityEngine;
 public class PlayerMovement1 : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    private Rigidbody rb;
-    private Vector3 movement;
+    private Rigidbody2D rb;
+    private Vector2 movement;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
