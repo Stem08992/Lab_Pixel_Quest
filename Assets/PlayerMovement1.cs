@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement1 : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         // Update Animator parameter
+        Debug.Log(movement.sqrMagnitude);
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
