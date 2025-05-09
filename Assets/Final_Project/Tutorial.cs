@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class Tutorial : MonoBehaviour
     private TextMeshProUGUI _talkText;
     private int _talkIndex = 0;
     private RectTransform rt;
+    public string nextLevel = "Ocean 1";
 
 
     //Tranfrom or
@@ -31,15 +34,18 @@ public class Tutorial : MonoBehaviour
             if (dialogue.Count - 1 == _talkIndex)
             {
 
-                // Move to new scene 
-    
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    SceneManager.LoadScene(nextLevel);
+                }
+
             }
             else
             {
-                if (_talkIndex == 0)
+                if (_talkIndex == 2)
                 {
-                    transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                    GetComponent<RectTransform>().anchoredPosition = new Vector2(-100, 200);
+                    transform.localScale = new Vector3(0.75f, 0.5f, 0.5f);
+                    GetComponent<RectTransform>().anchoredPosition = new Vector2(-0, 150);
 
                 }
                 //If index == 4
