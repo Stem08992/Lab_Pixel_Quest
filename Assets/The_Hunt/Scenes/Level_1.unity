@@ -297,7 +297,7 @@ Transform:
   m_GameObject: {fileID: 255723324}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.639383, y: -2.06171, z: -10}
+  m_LocalPosition: {x: -13.638971, y: -1.7616299, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -348,7 +348,6 @@ GameObject:
   - component: {fileID: 323083672}
   - component: {fileID: 323083677}
   - component: {fileID: 323083676}
-  - component: {fileID: 323083675}
   m_Layer: 0
   m_Name: Player Tips
   m_TagString: Untagged
@@ -371,33 +370,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 759227145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &323083675
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323083671}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!483693784 &323083676
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -739,6 +711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759227145}
   - component: {fileID: 759227144}
+  - component: {fileID: 759227148}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -778,6 +751,44 @@ Transform:
   - {fileID: 1922397447}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1839735485 &759227148
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759227143}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1088133975
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +870,7 @@ Transform:
   m_GameObject: {fileID: 1088133975}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.05, y: -2.06, z: -10}
+  m_LocalPosition: {x: -14.98, y: -1.76, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -877,7 +888,6 @@ GameObject:
   - component: {fileID: 1204555585}
   - component: {fileID: 1204555590}
   - component: {fileID: 1204555589}
-  - component: {fileID: 1204555588}
   - component: {fileID: 1204555591}
   m_Layer: 0
   m_Name: End
@@ -901,33 +911,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 759227145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1204555588
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204555584}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!483693784 &1204555589
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -1165,8 +1148,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!61 &1204555591
-BoxCollider2D:
+--- !u!19719996 &1204555591
+TilemapCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1197,19 +1180,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.39999962, y: -1.1999998}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 32, y: 16}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1779630302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1280,7 @@ GameObject:
   - component: {fileID: 1822268011}
   - component: {fileID: 1822268012}
   - component: {fileID: 1822268013}
+  - component: {fileID: 1822268014}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -9328,7 +9303,7 @@ CompositeCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_GeometryType: 0
@@ -10105,6 +10080,25 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 1822268006}
+--- !u!251 &1822268014
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822268006}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &1917417397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10131,11 +10125,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5442765969244622721, guid: 91ba8b75cf8d7d148b122f09c0057197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.05
+      value: -14.98
       objectReference: {fileID: 0}
     - target: {fileID: 5442765969244622721, guid: 91ba8b75cf8d7d148b122f09c0057197, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.06
+      value: -1.76
       objectReference: {fileID: 0}
     - target: {fileID: 5442765969244622721, guid: 91ba8b75cf8d7d148b122f09c0057197, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10173,7 +10167,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeroKnight
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6950278135730717126, guid: 91ba8b75cf8d7d148b122f09c0057197, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10243,7 +10238,7 @@ CompositeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10587,7 +10582,6 @@ GameObject:
   - component: {fileID: 2098084538}
   - component: {fileID: 2098084543}
   - component: {fileID: 2098084542}
-  - component: {fileID: 2098084541}
   m_Layer: 0
   m_Name: Objects
   m_TagString: Untagged
@@ -10610,33 +10604,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 759227145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &2098084541
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098084537}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!483693784 &2098084542
 TilemapRenderer:
   m_ObjectHideFlags: 0
