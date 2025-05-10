@@ -103,6 +103,11 @@ public class TensionMeter : MonoBehaviour
         cTension = Mathf.Clamp(cTension, minT, MaxT);
 
         MoveTensionBar(cTension);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            CatchScreen.SetActive(false);
+        }
     }
 
     void StartNextQTE()
@@ -114,7 +119,6 @@ public class TensionMeter : MonoBehaviour
 
             key = getkey();
             showkey(key);
-            CatchScreen.SetActive(true);
 
         }
         else
@@ -190,6 +194,7 @@ public class TensionMeter : MonoBehaviour
 
             fish = getfishes();
             showfishes(fish);
+            CatchScreen.SetActive(true);
 
 
 

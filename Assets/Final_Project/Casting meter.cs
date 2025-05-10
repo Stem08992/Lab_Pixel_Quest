@@ -27,6 +27,7 @@ public class PowerCastingMeter : MonoBehaviour
             bar.SetActive(true);
             meter.SetActive(true);
 
+
         }
 
         if (Input.GetMouseButton(0) && isCharging)
