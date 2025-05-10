@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class TensionMeter : MonoBehaviour
 {
-    public GameObject tensionBar;   
-    public SpriteRenderer qteImage; 
+    public GameObject tensionBar;
+    public GameObject castingMeter;
+    public GameObject castingbar;
+    public GameObject WholeTmeter;
+    public SpriteRenderer qtepic; 
     public Sprite keyw;        
     public Sprite keya;        
     public Sprite keys;        
@@ -16,7 +19,7 @@ public class TensionMeter : MonoBehaviour
     public float mTV = 10f;
     public float speedup = 0.5f;
     public float speeddown = 1f;
-    public float qteDuration = 2f;  
+    public float qteDuration = 50f;  
 
     private float cTension = 0f;
     private bool isTensionIncreasing = true;
@@ -25,11 +28,17 @@ public class TensionMeter : MonoBehaviour
     private float qteTimer;
     private int qteCount = 0;
     private int qtedone = 0;
-    private string key; 
+    private string key;
 
+    private void Start()
+    {
+        WholeTmeter.SetActive(false);
+        Debug.Log("starting qtecount = " + qteCount);
+    }
     public void StartTensionMeter(float power)
     {
-        qteCount = Mathf.FloorToInt(Mathf.Abs(power)); 
+        qteCount = Mathf.FloorToInt(2 * Mathf.Abs(power)); 
+        Debug.Log("qteCount = " + qteCount);
         cTension = minT;
         qtedone = 0;
         isTensionIncreasing = true;
@@ -67,7 +76,7 @@ public class TensionMeter : MonoBehaviour
             }
         }
 
-        if (isTensionIncreasing)
+        if (isTensionIncreasing == true)
         {
             cTension += speedup * Time.deltaTime;
         }
@@ -108,24 +117,24 @@ public class TensionMeter : MonoBehaviour
         switch (key)
         {
             case "W":
-                qteImage.sprite = keyw;
+                qtepic.sprite = keyw;
                 break;
             case "A":
-                qteImage.sprite = keya;
+                qtepic.sprite = keya;
                 break;
             case "S":
-                qteImage.sprite = keys;
+                qtepic.sprite = keys;
                 break;
             case "D":
-                qteImage.sprite = keyd;
+                qtepic.sprite = keyd;
                 break;
         }
     }
-    //hlerppp
+    
 
     void MoveTensionBar(float tension)
     {
-        float newpos = Mathf.Lerp(3.07f, 6.67f, (tension - minT) / (MaxT - minT));
+        float newpos = Mathf.Lerp(-3.07f, -6.67f, (tension - minT) / (MaxT - minT));
         tensionBar.transform.position = new Vector3(newpos, tensionBar.transform.position.y, tensionBar.transform.position.z);
     }
 
@@ -146,6 +155,7 @@ public class TensionMeter : MonoBehaviour
         }
     }
 
+    //Fail QTE & Tension is max. This is the lose condition.
     void nocatch()
     {
         isQTE = false;
@@ -158,14 +168,26 @@ public class TensionMeter : MonoBehaviour
     {
         if (qtedone >= qteCount)
         {
-            Debug.Log("caught the fish!");
+            Debug.Log("Catch() - caught the fish!");
+            WholeTmeter.SetActive(false);
+
+
+
+        }
+        else if (qtedone < qteCount)
+        {
+            Debug.Log("Catch() - lost the fish");
+            WholeTmeter.SetActive(false);
+
         }
         else
         {
-            Debug.Log(" lost the fish");
+            Debug.Log("Error");
         }
 
-        FindObjectOfType<PowerCastingMeter>().gameObject.SetActive(true);
+        castingMeter.SetActive(true);
+        castingbar.SetActive(true);
+
     }
 }
 

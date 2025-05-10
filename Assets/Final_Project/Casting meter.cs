@@ -7,6 +7,8 @@ public class PowerCastingMeter : MonoBehaviour
 {
     public GameObject bar;
     public GameObject meter;
+    public TensionMeter tensionMeter;
+    public GameObject WholeTmeter;
     public float minP = -5f;
     public float MaxP = 5f;
     public float oSpeed = 5f;
@@ -55,16 +57,17 @@ public class PowerCastingMeter : MonoBehaviour
         {
             isCharging = false;
             powerfunctionfunction(cpower);
-            cpower = 0f;
+            //cpower = 0f;
             bar.SetActive(false);
             meter.SetActive(false);
+            WholeTmeter.SetActive(true);
         }
     }
 
     void barmovingfunction(float power)
     {
         float barpos = Mathf.Lerp(3f, 7f, (power - minP) / (MaxP - minP));
-
+        tensionMeter.StartTensionMeter(barpos);
         bar.transform.position = new Vector3(barpos * speed, bar.transform.position.y, bar.transform.position.z);
     }
 
