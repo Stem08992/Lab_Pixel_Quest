@@ -61,16 +61,18 @@ public class PowerCastingMeter : MonoBehaviour
             bar.SetActive(false);
             meter.SetActive(false);
             WholeTmeter.SetActive(true);
+            tensionMeter.StartTensionMeter(cpower);
         }
     }
 
     void barmovingfunction(float power)
     {
         float barpos = Mathf.Lerp(3f, 7f, (power - minP) / (MaxP - minP));
-        tensionMeter.StartTensionMeter(barpos);
+        
         bar.transform.position = new Vector3(barpos * speed, bar.transform.position.y, bar.transform.position.z);
     }
 
+    //this function just writes to console what the power is when you stop casting (called in Update)
     void powerfunctionfunction(float power)
     {
         Debug.Log("Casting with power: " + power);
