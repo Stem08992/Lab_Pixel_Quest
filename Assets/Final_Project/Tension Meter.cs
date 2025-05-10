@@ -8,11 +8,24 @@ public class TensionMeter : MonoBehaviour
     public GameObject castingMeter;
     public GameObject castingbar;
     public GameObject WholeTmeter;
+    public GameObject CatchScreen;
     public SpriteRenderer qtepic; 
     public Sprite keyw;        
     public Sprite keya;        
-    public Sprite keys;        
-    public Sprite keyd;        
+    public Sprite keys;
+    public Sprite keyd;
+
+    public SpriteRenderer fishpic;
+    public Sprite AnglerFish;
+    public Sprite AtlanticWolf;
+    public Sprite Tuna;
+    public Sprite ParrotFish;
+    public Sprite CuttleFish;
+    public Sprite PufferFish;
+
+
+
+
 
     public float minT = 3f;
     public float MaxT = 7f;
@@ -29,15 +42,17 @@ public class TensionMeter : MonoBehaviour
     private int qteCount = 0;
     private int qtedone = 0;
     private string key;
+    private string fish;
 
     private void Start()
     {
         WholeTmeter.SetActive(false);
+        CatchScreen.SetActive(false);
         Debug.Log("starting qtecount = " + qteCount);
     }
     public void StartTensionMeter(float power)
     {
-        qteCount = Mathf.FloorToInt(2 * Mathf.Abs(power)); 
+        qteCount = Mathf.FloorToInt(2 + Mathf.Abs(power)); 
         Debug.Log("qteCount = " + qteCount);
         cTension = minT;
         qtedone = 0;
@@ -99,6 +114,8 @@ public class TensionMeter : MonoBehaviour
 
             key = getkey();
             showkey(key);
+            CatchScreen.SetActive(true);
+
         }
         else
         {
@@ -171,6 +188,9 @@ public class TensionMeter : MonoBehaviour
             Debug.Log("Catch() - caught the fish!");
             WholeTmeter.SetActive(false);
 
+            fish = getfishes();
+            showfishes(fish);
+
 
 
         }
@@ -188,6 +208,38 @@ public class TensionMeter : MonoBehaviour
         castingMeter.SetActive(true);
         castingbar.SetActive(true);
 
+    }
+
+    string getfishes()
+    {
+        string[] fishes = { "AnglerFish", "AtlanticWolf", "Tuna", "ParrotFish", "CuttleFish", "PufferFish" };
+        return fishes[Random.Range(0, fishes.Length)];
+    }
+    void showfishes(string fishes)
+    {
+        switch (fishes)
+        {
+            case "AnglerFish":
+                fishpic.sprite = AnglerFish;
+                break;
+            case "AtlanticWolf":
+                fishpic.sprite = AtlanticWolf;
+                break;
+            case "Tuna":
+                fishpic.sprite = Tuna;
+                break;
+            case "ParrotFish":
+                fishpic.sprite = ParrotFish;
+                break;
+            case "CuttleFish":
+                fishpic.sprite = CuttleFish;
+                break;
+            case "PufferFish":
+                fishpic.sprite = PufferFish;
+                break;
+  
+
+        }
     }
 }
 
