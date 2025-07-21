@@ -4,12 +4,11 @@ public class HW2PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
 
-     private float _xSpeed;
-     private float _ySpeed;
-
+    private float _xSpeed;
+    private float _ySpeed;
 
     public float speed = 3;
-    
+
     private string InputX = "Horizontal";
     private string InputY = "Vertical";
 
@@ -18,17 +17,11 @@ public class HW2PlayerMovement : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    private void Update ()
+    private void Update()
     {
-        _xSpeed = Input.GetAxis("Horizontal");
-        _ySpeed = Input.GetAxis("Vertical");
+        _xSpeed = Input.GetAxis(InputX);  // Use variable here
+        _ySpeed = Input.GetAxis(InputY);  // Use variable here
 
         _rigidbody2D.velocity = new Vector2(_xSpeed, _ySpeed) * speed;
     }
-
-
-
-
-
-
 }
