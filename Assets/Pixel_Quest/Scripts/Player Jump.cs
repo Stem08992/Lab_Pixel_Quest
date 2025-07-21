@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
@@ -45,4 +46,5 @@ public class PlayerJump : MonoBehaviour
             isGrounded = true;
         }
     }
+    If(Input.GetKeyDown(key))
 }   
