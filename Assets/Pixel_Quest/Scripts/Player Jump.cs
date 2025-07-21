@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-   public float CapsuleHeight = 0.25f;
+    public float CapsuleHeight = 0.25f;
     public float CapsuleRadius = 0.08f;
-   
+
     public Transform feetCollider;
     public LayerMask groundMask;
     private bool _groundCheck;
@@ -20,7 +20,7 @@ public class PlayerJump : MonoBehaviour
 
     void Start()
     {
-       gravityForce = new Vector2(0f, Physics2D.gravity.y);
+        gravityForce = new Vector2(0f, Physics2D.gravity.y);
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -46,5 +46,6 @@ public class PlayerJump : MonoBehaviour
             isGrounded = true;
         }
     }
-    If(Input.GetKeyDown(key))
+  
+
 }   
