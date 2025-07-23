@@ -5,35 +5,56 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    public string nextLevel = "GeoLevel_2";
+    //public string nextLevel = "GeoLevel_2";
+    public Transform respawnPoint;
     private int coinCounter = 0;
-    public int Health = 3; 
+    public int _health = 3;
+  
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        switch (collision.tag)
+        switch (other.tag)
         {
+            case "Respawn":
+                {
+                    respawnPoint.position = other.transform.Find("Point").position;
+                    break;
+                }
             case "Death":
                 {
-                    string thisLevel = SceneManager.GetActiveScene().name;
-                    SceneManager.LoadScene(thisLevel);
+                    _health--;
+                    if (_health <= 0)
+                    {
+                        string thislevel= SceneManager.GetActiveScene().name;
+                        SceneManager.LoadScene(thislevel);
+                    }
+                    else
+                    {
+                        transform.position = respawnPoint.position;
+                    }
+    
                     break;
                 }
             case "Coin":
                 {
                     coinCounter++;
-                    Destroy(collision.gameObject);
+                    Destroy(other.gameObject);
                     break;
                 }
             case "Finish":
                 {
+                  string nextLevel = other.GetComponent<LevelGoals>().nextLevel;
                     SceneManager.LoadScene(nextLevel);
                     break;
                 }
             case "Health":
                 {
-                    Health++;
-                    Destroy(collision.gameObject); 
+                  if (_health < 3)
+                    {
+                        Destroy(other.gameObject);
+                        _health++;
+                    }
+                 
                     break;
                 }
         }
