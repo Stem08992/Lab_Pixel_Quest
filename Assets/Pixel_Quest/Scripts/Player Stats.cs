@@ -9,7 +9,15 @@ public class PlayerStats : MonoBehaviour
     public Transform respawnPoint;
     private int coinCounter = 0;
     public int _health = 3;
-  
+    public int maxHealth = 3;
+    private PlayerUIController _playerUIController;
+
+    private void Start()
+    {
+        _playerUIController = GetComponent<PlayerUIController>();
+        _playerUIController.UpdateHealth(_health, maxHealth);
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,6 +31,7 @@ public class PlayerStats : MonoBehaviour
             case "Death":
                 {
                     _health--;
+                    _playerUIController.UpdateHealth(_health, maxHealth);
                     if (_health <= 0)
                     {
                         string thislevel= SceneManager.GetActiveScene().name;
@@ -51,8 +60,10 @@ public class PlayerStats : MonoBehaviour
                 {
                   if (_health < 3)
                     {
-                        Destroy(other.gameObject);
                         _health++;
+                        _playerUIController.UpdateHealth(_health, maxHealth);
+                        Destroy(other.gameObject);
+                   
                     }
                  
                     break;
