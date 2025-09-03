@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HW3PlayerDialogue : MonoBehaviour
 {
@@ -11,9 +12,13 @@ public class HW3PlayerDialogue : MonoBehaviour
     private GameObject _talkPanel;
     private TextMeshProUGUI _talkText;
     private int _talkIndex = 0;
+    private bool isEvilWizard = false;
+    public string nextLevel = "Graveyard";
 
     private void Start()
     {
+        isEvilWizard = false;
+
         _talkText = GameObject.Find(HW3Structs.GameObjects.talkText).GetComponent<TextMeshProUGUI>();
 
         _talkPanel = GameObject.Find(HW3Structs.GameObjects.talkPanel);
@@ -29,6 +34,10 @@ public class HW3PlayerDialogue : MonoBehaviour
             {
                 isSpeaking = false;
                 _talkPanel.SetActive(false);
+                if (isEvilWizard)
+                {
+                    SceneManager.LoadScene(nextLevel);
+                }
             }
             else
             {
@@ -38,6 +47,7 @@ public class HW3PlayerDialogue : MonoBehaviour
         }
         else if (canSpeak && Input.GetKeyDown(KeyCode.E))
         {
+            isEvilWizard = dialogue[0].Equals("Finally I have found you");  
             isSpeaking = true;
             _talkPanel.SetActive(true);
             _talkIndex = 0;
