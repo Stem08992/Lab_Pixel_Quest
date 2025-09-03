@@ -20,6 +20,7 @@ public class HW2Enemy : MonoBehaviour
     // Tags and Names 
     private string boundsTag = "Bounds";
     private string bulletTag = "Bullet";
+    private string bulletBombTag = "BulletBomb";
     private string gameControllerComponent = "GameController";
 
     // Component 
@@ -64,8 +65,13 @@ public class HW2Enemy : MonoBehaviour
             //Destorys the enemy 
             Destroy(gameObject);
         }
+        else if (collision.gameObject.tag == bulletBombTag)
+        {
+            _hw2GameController.UpdateScore();
+            Destroy(gameObject);
+        }
         // If the enemy touches a bound it gets destored 
-        else if(collision.gameObject.tag == boundsTag)
+        else if (collision.gameObject.tag == boundsTag)
         {
             Destroy(gameObject);
         }
