@@ -4,7 +4,7 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerJump : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
     public string nextLevel = "GeoLevel_2";
 
