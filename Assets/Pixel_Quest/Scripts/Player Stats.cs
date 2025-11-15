@@ -7,12 +7,22 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    public Transform respawnPoint;
+  
+        
+        public Transform respawnPoint;
     public string nextLevel = "GeoLevel_2";
     private int coinCounter = 0;
     private int _health = 3;
     private int _maxHealth = 3;
+  
 
+
+    private void Start()
+    {
+        
+       
+      
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.tag)
@@ -28,8 +38,10 @@ public class PlayerStats : MonoBehaviour
                 {
                    if (_health < _maxHealth)
                     {
-                        Destroy(collision.gameObject);
+                        
                         _health++;
+                        
+                        Destroy(collision.gameObject);
                     }
 
                     break;
@@ -47,6 +59,7 @@ public class PlayerStats : MonoBehaviour
               
                 {
                    _health--;
+                    
                     if (_health <= 0)
                     {
                         string thisLevel = SceneManager.GetActiveScene().name;
@@ -68,14 +81,8 @@ public class PlayerStats : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }
