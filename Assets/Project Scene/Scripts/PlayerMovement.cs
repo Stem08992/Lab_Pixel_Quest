@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class FinalGamePlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rigRigidbody2D;
-    private HW3PlayerDialogue _hw3PlayerDialogue;
+    private PlayerDialogue PlayerDialogue;
     private float _xVelocity = 0f;
     private float _yVelocity = 0f;
     public float speed = 3;
@@ -17,13 +17,13 @@ public class FinalGamePlayerMovement : MonoBehaviour
     void Start()
     {
         _rigRigidbody2D = GetComponent<Rigidbody2D>();
-        _hw3PlayerDialogue = GetComponent<HW3PlayerDialogue>();
+        PlayerDialogue = GetComponent<PlayerDialogue>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_hw3PlayerDialogue.IsSpeaking())
+        if (PlayerDialogue.IsSpeaking())
         {
             _xVelocity = 0;
             _yVelocity = 0;
