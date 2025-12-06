@@ -32,7 +32,6 @@ public class HW2Enemy : MonoBehaviour
     //Checks who is shooting the bullet and set up the bullet settings 
     private void Start()
     {
-        _hw2GameController = GameObject.Find(gameControllerComponent).GetComponent<HW2GameController>();
         StartCoroutine(Death());
     }
 
