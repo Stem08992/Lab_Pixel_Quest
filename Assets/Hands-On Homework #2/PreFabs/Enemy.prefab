@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2442468950450188958}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 1306876364857980075}
-  minSpeed: 1
-  maxSpeed: 4
-  deathTime: 30
+  minSpeed: 10
+  maxSpeed: 10
+  deathTime: 2
   playerBullet: 1
