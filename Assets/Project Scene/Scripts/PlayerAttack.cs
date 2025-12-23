@@ -1,54 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public GameObject slashObject;
-    public float attackDuration = 0.15f;
-
-    private Vector2 lastDirection = Vector2.down;
+    public Animator animator;
+    private Vector2 lastMoveDirection;
 
     void Update()
     {
-        UpdateDirection();
+        // 1. Capture Movement Input to track direction
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
 
+        if (moveX != 0 || moveY != 0)
+        {
+            lastMoveDirection = new Vector2(moveX, moveY).normalized;
+        }
+
+        // 2. Check for Space Bar press
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Attack();
+            PerformSlash();
         }
     }
 
-    void UpdateDirection()
+    void PerformSlash()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-
-        if (x != 0 || y != 0)
-            lastDirection = new Vector2(x, y);
-    }
-
-    void Attack()
-    {
-        slashObject.SetActive(true);
-
-        Animator slashAnimator = slashObject.GetComponent<Animator>();
-
-        if (lastDirection.y > 0)
-            slashAnimator.Play("Slash_Up");
-        else if (lastDirection.y < 0)
-            slashAnimator.Play("Slash_Down");
-        else if (lastDirection.x < 0)
-            slashAnimator.Play("Slash_Left");
-        else if (lastDirection.x > 0)
-            slashAnimator.Play("Slash_Right");
-
-        Invoke(nameof(EndAttack), attackDuration);
-    }
-
-    void EndAttack()
-    {
-        slashObject.SetActive(false);
+        // Decide which animation to play based on lastMoveDirection
+        if (Mathf.Abs(lastMoveDirection.x) > Mathf.Abs(lastMoveDirection.y))
+        {
+            if (lastMoveDirection.x > 0) animator.Play("Slash_Right");
+            else animator.Play("Slash_Left");
+        }
+        else
+        {
+            if (lastMoveDirection.y > 0) animator.Play("Slash_Up");
+            else animator.Play("Slash_Down");
+        }
     }
 }
-

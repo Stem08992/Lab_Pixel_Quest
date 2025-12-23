@@ -12,13 +12,24 @@ public class PlayerDialogue : MonoBehaviour
     private TextMeshProUGUI _talkText;
     private int _talkIndex = 0;
 
-    private void Start()
+   private void Start()
+{
+    // Find the text component
+    GameObject textObj = GameObject.Find(ProjectStructs.GameObjects.talkText);
+    if (textObj != null) 
     {
-        _talkText = GameObject.Find(ProjectStructs.GameObjects.talkText).GetComponent<TextMeshProUGUI>();
+        _talkText = textObj.GetComponent<TextMeshProUGUI>();
+    }
 
-        _talkPanel = GameObject.Find(ProjectStructs.GameObjects.talkPanel);
+    // Find the panel
+    _talkPanel = GameObject.Find(ProjectStructs.GameObjects.talkPanel);
+    
+    // Only try to deactivate if we actually found it
+    if (_talkPanel != null)
+    {
         _talkPanel.SetActive(false);
     }
+}
 
     // Update is called once per frame
     void Update()
