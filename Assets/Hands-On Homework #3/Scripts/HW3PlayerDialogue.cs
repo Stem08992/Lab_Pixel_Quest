@@ -6,10 +6,12 @@ using UnityEngine;
 public class HW3PlayerDialogue : MonoBehaviour
 {
     public List<string> dialogue = new List<string>();
+    public List<string> names= new List<string>();
     private bool canSpeak = false;
     private bool isSpeaking = false;
     private GameObject _talkPanel;
     private TextMeshProUGUI _talkText;
+    public TextMeshProUGUI nameText;
     private int _talkIndex = 0;
 
     private void Start()
@@ -33,6 +35,7 @@ public class HW3PlayerDialogue : MonoBehaviour
             else
             {
                 _talkIndex++;
+                nameText.text = names[_talkIndex];
                 _talkText.text = dialogue[_talkIndex];
             }
         }
@@ -41,6 +44,7 @@ public class HW3PlayerDialogue : MonoBehaviour
             isSpeaking = true;
             _talkPanel.SetActive(true);
             _talkIndex = 0;
+            nameText.text = names[_talkIndex];
             _talkText.text = dialogue[_talkIndex]; 
         }
     }
@@ -55,9 +59,12 @@ public class HW3PlayerDialogue : MonoBehaviour
         return isSpeaking;
     }
 
-    public void CopyDialogue(List<string> newDialogue)
+    public void CopyDialogue(List<string> newDialogue, List<string> newNames)
     {
         dialogue.Clear();
         dialogue.AddRange(newDialogue);
+
+        names.Clear();
+        names.AddRange(newNames);
     }
 }

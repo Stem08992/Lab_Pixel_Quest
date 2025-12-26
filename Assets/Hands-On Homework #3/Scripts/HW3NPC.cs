@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class HW3NPC : MonoBehaviour
 {
+
     public List<string> dialogue = new List<string>();
+    public List<string> names = new List<string>();
     private GameObject _talkIcon;
 
     private void Start()
@@ -19,7 +21,7 @@ public class HW3NPC : MonoBehaviour
         if(collision.tag == HW3Structs.Tags.playerTag)
         {
             _talkIcon.SetActive(true);
-            collision.GetComponent<HW3PlayerDialogue>().CopyDialogue(dialogue);
+            collision.GetComponent<HW3PlayerDialogue>().CopyDialogue(dialogue, names);
             collision.GetComponent<HW3PlayerDialogue>().SetCanSpeak(true);
         }
     }
