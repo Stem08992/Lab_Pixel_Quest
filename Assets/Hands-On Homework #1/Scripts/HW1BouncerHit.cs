@@ -10,7 +10,7 @@ public class HW1BouncerHit : MonoBehaviour
     //Animator that will make the bounce animate 
     private  Animator _animator;
     //Value of hitting a bouncer 
-    private const int Score = 5;
+    private const int Score = -5;
     //Used to pass the value to the game flow script 
     private HW1GameFlow _hw1GameFlow;
     //Plays SFX when the player hits the bouncer 
