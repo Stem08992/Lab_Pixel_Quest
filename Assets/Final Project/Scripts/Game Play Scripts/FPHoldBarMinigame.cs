@@ -14,15 +14,12 @@ public class FPHoldBarMinigame : MonoBehaviour
     private int i = 0;
 
     public bool gameActive = false;
-    private bool audioPlaying = false;
 
     public Transform Player;
-    private FPAudioManager audioManager;
 
     private void Start()
     {
         gameObject.SetActive(false);
-        audioManager = GameObject.Find("SFXManager").GetComponent<FPAudioManager>();
     }
     private void OnEnable()
     {
@@ -33,18 +30,12 @@ public class FPHoldBarMinigame : MonoBehaviour
 
     private void Update()
     {
-
+        
         if (!gameActive && Input.GetKeyDown(KeyCode.Space))
         {
             ingredientStat = 0;
             gameActive = true;
             gameObject.SetActive(true);
-
-            if (!audioPlaying)
-            {
-                audioManager.PlayAudio("drink");
-                audioPlaying = true;
-            }
         }
 
 
@@ -57,7 +48,8 @@ public class FPHoldBarMinigame : MonoBehaviour
 
         if (gameActive && Input.GetKeyUp(KeyCode.Space) || Player.transform.childCount >= 1)
         {
-            StopMinigame();
+            i = 0;
+            gameObject.SetActive(false);
             return;
         }
 
@@ -68,21 +60,12 @@ public class FPHoldBarMinigame : MonoBehaviour
 
             if (barSlider.value >= 1f)
             {
-                StopMinigame();
+                i = 0;
+                gameObject.SetActive(false);
                 
             }
         }
 
     }
-    private void StopMinigame()
-    {
-        i = 0;
-        gameObject.SetActive(false);
 
-        if(audioPlaying)
-        {
-            audioManager.Stop();
-            audioPlaying = false;
-        }
-    }
 }

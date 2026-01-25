@@ -7,7 +7,6 @@ public class FPAddIngredients : MonoBehaviour
     // Start is called before the first frame update
     public Transform Player;
     public Transform MinigamePanel;
-    private FPAudioManager audioManager;
 
     public float updateDuration = 1f;
     private int maxIngredients = 4;
@@ -16,7 +15,6 @@ public class FPAddIngredients : MonoBehaviour
     {
         string tag = gameObject.tag;
         FPHoldBarMinigame minigame = MinigamePanel.GetComponent<FPHoldBarMinigame>();
-        audioManager = GameObject.Find("SFXManager").GetComponent<FPAudioManager>();
 
         if (Player.transform.childCount >= 1)
         {
@@ -29,7 +27,7 @@ public class FPAddIngredients : MonoBehaviour
                         if (stats.ice < 2)
                         {
                             stats.ice += 1;
-                            audioManager.PlayAudio("ice");
+
                         }
                         break;
                     }

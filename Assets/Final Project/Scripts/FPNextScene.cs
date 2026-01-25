@@ -7,16 +7,10 @@ public class FPNextScene : MonoBehaviour
 {
     public List<string> sceneList;
     public static int currentSceneIndex = 0;
-
-    private FPAudioManager audioManager;
     // Start is called before the first frame update
-    private void Start()
-    {
-        audioManager = GameObject.Find("SFXManager").GetComponent<FPAudioManager>();
-    }
     private void OnMouseDown()
     {
-        audioManager.PlayAudio("serve");
+        Debug.Log(currentSceneIndex + sceneList[currentSceneIndex]);
         GameObject orderObj = GameObject.FindGameObjectWithTag("OrderData");
         if (orderObj != null)
         {
