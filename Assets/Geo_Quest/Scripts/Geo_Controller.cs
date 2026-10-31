@@ -10,11 +10,13 @@ public class Geo_Controller : MonoBehaviour {
     int Var3 = 3;
 
     private Rigidbody2D rb2d;
+    private SpriteRenderer _spriteRenderer;
     public int speed = 5;
 
     // Start is called before the first frame update
     public void Start() {
         rb2d = GetComponent<Rigidbody2D>();
+        _spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         
         //string Var1 = "World";
         //Debug.Log(Var2 + Var1);
@@ -24,6 +26,10 @@ public class Geo_Controller : MonoBehaviour {
      void Update() {
         float xInput = Input.GetAxis("Horizontal");
         xInput *= variable1;
+
+        if (xInput > 0) { _spriteRenderer.flipX = true; }
+        else if (xInput < 0) { _spriteRenderer.flipX = false; }
+
         rb2d.velocity = new Vector2(xInput * speed, rb2d.velocity.y);
 
 
